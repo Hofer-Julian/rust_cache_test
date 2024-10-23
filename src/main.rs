@@ -6,6 +6,6 @@ async fn main() -> Result<(), Error> {
         .await?
         .text()
         .await?;
-    println!("Response: {}", response);
+    println!("Response:  {}", response);
     Ok(())
 }
