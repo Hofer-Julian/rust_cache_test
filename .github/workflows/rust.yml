@@ -21,21 +21,11 @@ jobs:
       with:
         cache: true
 
-    - name: Cache cargo registry
-      uses: actions/cache@v2
+    - uses: Swatinem/rust-cache@v2
       with:
-        path: ~/.cargo/registry
-        key: ${{ runner.os }}-cargo-registry-${{ hashFiles('**/Cargo.lock', '**/pixi.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-cargo-registry-
+        workspaces: ". -> target-pixi"
+        key: ${{ hashFiles('pixi.lock') }}
 
-    - name: Cache cargo index
-      uses: actions/cache@v2
-      with:
-        path: ~/.cargo/git
-        key: ${{ runner.os }}-cargo-index-${{ hashFiles('**/Cargo.lock', '**/pixi.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-cargo-index-
 
     - name: Build
       run: pixi run build
