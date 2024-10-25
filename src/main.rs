@@ -11,7 +11,7 @@ async fn fetch_todo() -> Result<String, Error> {
 #[tokio::main]
 async fn main() -> Result<(), Error> {
     let response = fetch_todo().await?;
-    println!("Response:{}", response);
+    println!("Response: {}", response);
     Ok(())
 }
 
