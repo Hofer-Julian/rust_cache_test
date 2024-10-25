@@ -12,6 +12,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/binutils_linux-64-2.43-h4852527_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/c-compiler-1.8.0-h2b85faf_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ca-certificates-2024.8.30-hbcca054_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/cargo-nextest-0.9.78-h6c30b3d_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/clang-19-19.1.2-default_hb5137d0_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/clang-19.1.2-default_h9e3a008_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/compilers-1.8.0-ha770c72_1.conda
@@ -58,6 +59,7 @@ environments:
       win-64:
       - conda: https://conda.anaconda.org/conda-forge/win-64/_openmp_mutex-4.5-2_gnu.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/c-compiler-1.8.0-hcfcfb64_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/win-64/cargo-nextest-0.9.78-ha073cba_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/clang-19-19.1.2-default_hec7ea82_1.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/clang-19.1.2-default_hec7ea82_1.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/compiler-rt-19.1.2-hc790b64_0.conda
@@ -220,6 +222,42 @@ packages:
   license: ISC
   size: 159003
   timestamp: 1725018903918
+- kind: conda
+  name: cargo-nextest
+  version: 0.9.78
+  build: h6c30b3d_0
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/cargo-nextest-0.9.78-h6c30b3d_0.conda
+  sha256: 9e232557caeb8bf4e34c5d0175b23ed1a129df78c6aad01bb4792e532b5f5201
+  md5: 013179d01cba10a39c1badaace213143
+  depends:
+  - libgcc >=13
+  - __glibc >=2.17,<3.0.a0
+  constrains:
+  - __glibc >=2.17
+  license: MIT
+  license_family: MIT
+  size: 4765005
+  timestamp: 1728918162264
+- kind: conda
+  name: cargo-nextest
+  version: 0.9.78
+  build: ha073cba_0
+  subdir: win-64
+  url: https://conda.anaconda.org/conda-forge/win-64/cargo-nextest-0.9.78-ha073cba_0.conda
+  sha256: a1759b1734162ec7bf225742fefee8d4b9db39215e0d34be9302a037299aa4ae
+  md5: 0d404f06dbc7968fbf247d7cc9390744
+  depends:
+  - vc >=14.2,<15
+  - vc14_runtime >=14.29.30139
+  - ucrt >=10.0.20348.0
+  - vc >=14.2,<15
+  - vc14_runtime >=14.29.30139
+  - ucrt >=10.0.20348.0
+  license: MIT
+  license_family: MIT
+  size: 4538985
+  timestamp: 1728918279376
 - kind: conda
   name: clang
   version: 19.1.2

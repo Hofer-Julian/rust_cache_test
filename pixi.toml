@@ -9,11 +9,13 @@ version = "0.1.0"
 [tasks]
 build = "cargo build"
 start = "cargo run"
+test = "cargo nextest run"
 
 [dependencies]
 rust = ">=1.81.0,<2"
 compilers = ">=1.8.0,<2"
 make = ">=4.4.1,<5"
+cargo-nextest = ">=0.9.78,<0.10"
 
 [target.linux-64.dependencies]
 mold = ">=2.34.1,<3"
